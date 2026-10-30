@@ -1,0 +1,29 @@
+﻿<Window x:Class="zrada.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zrada"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top"
+                        Background="LightGray" Height="70">
+                <TextBlock Text="Книги" FontSize="50"></TextBlock>
+                <Separator Width="20"></Separator>
+                <Button Content="Назад" FontSize="10" Height="30" Margin="5" Click="Back_Click"> </Button>
+                <Button Content="Вперед" FontSize="10" Height="30" Margin="5" Click="Next_Click"></Button>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Left"
+                        Background="Gray" Width="120">
+                <Button Content="Главная" FontSize="10" Height="30" Margin="5" Click="ShowMain_Click"></Button>
+                <Button Content="Каталог книг" FontSize="10" Height="30" Margin="5" Click="ShowCatalog_Click"></Button>
+                <Button Content="FAQ" FontSize="10" Height="30" Margin="5" Click="ShowInfo_Click" ></Button>
+
+            </StackPanel>
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Background="DarkGray"/>
+
+        </DockPanel>
+    </Grid>
+</Window>
